@@ -14,7 +14,6 @@ const CanvasLoader = () => {
 	// 		return () => clearTimeout(timeout);
 	// 	}
 	// }, [progress]);
-	console.log(progress);
 
 	return (
 		<Html
@@ -49,7 +48,7 @@ const CanvasLoader = () => {
 					marginTop: 10,
 				}}
 			>
-				{progress.toFixed(2)}
+				{progress.toFixed(2)}%
 			</p>
 			<style>
 				{`
