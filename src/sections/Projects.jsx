@@ -30,7 +30,7 @@ const Projects = () => {
 	const currentProject = myProjects[selectedProjectIndex];
 
 	return (
-		<section className="c-space my-20">
+		<section className="c-space my-20" id="projects">
 			<p className="head-text">Selected Projects</p>
 
 			<div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
@@ -59,16 +59,31 @@ const Projects = () => {
 							))}
 						</div>
 
-						<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600" href={currentProject.href} target="_blank" rel="noreferrer">
-							<p>Check Live Site</p>
-							<img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-						</a>
+						<div className="flex items-center gap-4">
+							<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600 " href={currentProject.href} target="_blank" rel="noreferrer">
+								<p>{currentProject.report ? "Check Experiment" : "Check Live Site"}</p>
+								<img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+							</a>
+
+							{currentProject.report && (
+								<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600 " href={currentProject.report} target="_blank" rel="noreferrer">
+									<p>Read the Report</p>
+									<img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+								</a>
+							)}
+						</div>
 					</div>
 
 					<div className="flex justify-between items-center mt-7">
 						<button className="arrow-btn" onClick={() => handleNavigation("previous")}>
 							<img src="/assets/left-arrow.png" alt="left arrow" />
 						</button>
+
+						<div className="flex gap-2">
+							{[...Array(projectCount)].map((_, index) => (
+								<div key={index} className={`w-2 h-2 rounded-full cursor-pointer transition-colors duration-200 ${index === selectedProjectIndex ? "bg-white" : "bg-white/50"}`} onClick={() => setSelectedProjectIndex(index)} />
+							))}
+						</div>
 
 						<button className="arrow-btn" onClick={() => handleNavigation("next")}>
 							<img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />

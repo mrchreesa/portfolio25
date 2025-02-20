@@ -4,24 +4,47 @@ export const navLinks = [
 		name: "Home",
 		href: "#home",
 	},
-	{
-		id: 2,
-		name: "About",
-		href: "#about",
-	},
+	// {
+	// 	id: 2,
+	// 	name: "About",
+	// 	href: "#about",
+	// },
 	{
 		id: 3,
-		name: "Work",
-		href: "#work",
+		name: "Projects",
+		href: "#projects",
 	},
 	{
 		id: 4,
-		name: "Contact",
-		href: "#contact",
+		name: "Experience",
+		href: "#experience",
 	},
 ];
 
 export const myProjects = [
+	{
+		title: "Student Performance Prediction",
+		desc: "Developed a predictive machine learning model using Linear Regression to analyze student performance based on a Kaggle dataset with 15 different features, including study time, absences, and parental support.",
+		subdesc: "Built with Python, Jupyter Notebook, Pandas, Scikit-learn, and Matplotlib to analyze and visualize data, ensuring accurate predictions and insights.",
+		href: "https://github.com/mrchreesa/linear-regression/blob/main/student_pred.ipynb",
+		texture: "/textures/project/linear.mp4",
+		logo: "/assets/icons/regression.jpg",
+		spotlight: "/assets/spotlight3.png",
+		logoStyle: {
+			backgroundColor: "#112240",
+			border: "0.2px solid #233554",
+			boxShadow: "0px 0px 60px 0px #64ffda4d",
+		},
+		tags: [
+			{ id: 1, name: "Python", path: "/assets/icons/python.png" },
+			{ id: 2, name: "Jupyter Notebook", path: "/assets/icons/jupyter.png" },
+			{ id: 3, name: "Pandas", path: "/assets/icons/pandas.png" },
+			{ id: 4, name: "Scikit-learn", path: "/assets/icons/scikit.png" },
+			{ id: 5, name: "Matplotlib", path: "/assets/icons/matplotlib.png" },
+		],
+		report: "/assets/Student_Prediction_Report.pdf",
+	},
+
 	{
 		title: "NFT Marketplace",
 		desc: "A Web3 NFT marketplace featuring Metamask authentication, NFT minting, real-time bidding auctions, and smart contract-based secondary sales.",
@@ -172,6 +195,15 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
 	{
 		id: 1,
+		name: "Freelance",
+		pos: "Freelance Developer",
+		duration: "Sept 2023 - Present",
+		title: "Delivered various web projects for clients using HTML, CSS, JavaScript, React, and Next.js. Specialized in front-end development, responsive design, and modern web technologies, ensuring high-quality solutions tailored to client needs.",
+		icon: "/assets/freelance.svg",
+		animation: "salute",
+	},
+	{
+		id: 2,
 		name: "Carbon XYZ",
 		pos: "Full Stack Developer",
 		duration: "Feb 2023 - Sept 2023",
@@ -180,21 +212,12 @@ export const workExperiences = [
 		animation: "victory",
 	},
 	{
-		id: 2,
+		id: 3,
 		name: "Kid's Galaxy",
 		pos: "Full Stack Developer Intern",
 		duration: "Nov 2022 - Feb 2023",
 		title: "Developed an educational booking system where tutors manage availability and students book slots. Built with Next.js, MongoDB, and TailwindCSS. Implemented authentication, scheduling, real-time updates, and database optimization. Ensured security and collaborated with designers for a seamless UI.",
 		icon: "/assets/kidsgalaxy.svg",
 		animation: "clapping",
-	},
-	{
-		id: 3,
-		name: "Freelance",
-		pos: "Freelance Developer",
-		duration: "Sept 2023 - Present",
-		title: "Delivered various web projects for clients using HTML, CSS, JavaScript, React, and Next.js. Specialized in front-end development, responsive design, and modern web technologies, ensuring high-quality solutions tailored to client needs.",
-		icon: "/assets/freelance.svg",
-		animation: "salute",
 	},
 ];
