@@ -5,15 +5,16 @@ const CanvasLoader = () => {
 	const { progress } = useProgress();
 	const [display, setDisplay] = useState("flex");
 
-	useEffect(() => {
-		if (progress === 100) {
-			const timeout = setTimeout(() => {
-				setDisplay("none");
-			}, 500);
+	// useEffect(() => {
+	// 	if (progress === 100) {
+	// 		const timeout = setTimeout(() => {
+	// 			setDisplay("none");
+	// 		}, 500);
 
-			return () => clearTimeout(timeout);
-		}
-	}, [progress]);
+	// 		return () => clearTimeout(timeout);
+	// 	}
+	// }, [progress]);
+	console.log(progress);
 
 	return (
 		<Html
