@@ -158,7 +158,7 @@ export const myProjects = [
 		title: "Aetos Restaurant",
 		desc: "Aetos Restaurant is a modern, responsive website for a restaurant that offers a seamless and elegant user experience. It features a modern, responsive design, a user-friendly interface, and a seamless and elegant user experience.",
 		subdesc: "Built with Next.js, Sanity.io, and TailwindCSS to offer a seamless and elegant user experience.",
-		href: "https://aetos-restaurant.vercel.app/",
+		href: "https://aetostaverna.co.uk/",
 		texture: "/textures/project/aetos-1.mp4",
 		logo: "/assets/project-logo3.png",
 		spotlight: "/assets/spotlight2.png",
@@ -219,5 +219,16 @@ export const workExperiences = [
 		title: "Developed an educational booking system where tutors manage availability and students book slots. Built with Next.js, MongoDB, and TailwindCSS. Implemented authentication, scheduling, real-time updates, and database optimization. Ensured security and collaborated with designers for a seamless UI.",
 		icon: "/assets/kidsgalaxy.svg",
 		animation: "clapping",
+	},
+];
+
+export const quote = [
+	{
+		id: 1,
+		quote: `"Great things are done by a series of small things brought together"\n  - Vincent Van Gogh`,
+	},
+	{
+		id: 2,
+		quote: "Thanks for visiting my portfolio!",
 	},
 ];
