@@ -23,7 +23,7 @@ const CanvasLoader = () => {
 				display: display,
 				justifyContent: "center",
 				alignItems: "center",
-				flexDirection: "row",
+				flexDirection: "column",
 				opacity: progress === 100 ? 0 : 1,
 				transition: "opacity 0.5s ease",
 			}}
@@ -39,6 +39,16 @@ const CanvasLoader = () => {
 				}}
 			>
 				<span>.</span> <span>.</span> <span>.</span>
+			</p>
+			<p
+				style={{
+					fontSize: 24,
+					color: "#F1F1F1",
+					fontWeight: 600,
+					marginTop: 10,
+				}}
+			>
+				{progress.toFixed(2)}
 			</p>
 			<style>
 				{`
