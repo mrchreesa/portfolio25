@@ -229,6 +229,6 @@ export const quote = [
 	},
 	{
 		id: 2,
-		quote: "Thanks for visiting my portfolio!",
+		quote: "Thanks for visiting!",
 	},
 ];
