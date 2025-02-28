@@ -19,6 +19,6 @@ const ReactLogo = ({ scale, ...props }) => {
 	);
 };
 
-useGLTF.preload("/react.glb");
+useGLTF.preload("/models/react.glb");
 
 export default ReactLogo;

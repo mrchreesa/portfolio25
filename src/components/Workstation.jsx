@@ -1,4 +1,4 @@
-import { useGLTF, useProgress } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { Suspense } from "react";

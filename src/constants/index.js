@@ -27,7 +27,7 @@ export const myProjects = [
 		desc: "Developed a predictive machine learning model using Linear Regression to analyse student performance based on a Kaggle dataset with 15 different features, including study time, absences, and parental support.",
 		subdesc: "Built with Python, Jupyter Notebook, Pandas, Scikit-learn, and Matplotlib to analyse and visualise data, ensuring accurate predictions and insights.",
 		href: "https://github.com/mrchreesa/linear-regression/blob/main/student_pred.ipynb",
-		texture: "/textures/project/linear.mp4",
+		texture: "/textures/project/linear2.mp4",
 		logo: "/assets/icons/regression.jpg",
 		spotlight: "/assets/spotlight3.png",
 		logoStyle: {
@@ -43,29 +43,6 @@ export const myProjects = [
 			{ id: 5, name: "Matplotlib", path: "/assets/icons/matplotlib.png" },
 		],
 		report: "/assets/Report.pdf",
-	},
-
-	{
-		title: "NFT Marketplace",
-		desc: "A Web3 NFT marketplace featuring Metamask authentication, NFT minting, real-time bidding auctions, and smart contract-based secondary sales.",
-		subdesc: "Built with Next.js, MongoDB, TailwindCSS, Infura, Ethers.js, and IPFS to ensure a seamless and decentralised user experience.",
-		href: "https://new-elements-marketplace.vercel.app/",
-		texture: "/textures/project/nft-marketplace1.mp4",
-		logo: "/assets/project-logo1.png",
-		spotlight: "/assets/spotlight1.png",
-		logoStyle: {
-			backgroundColor: "#1C1A43",
-			border: "0.2px solid #252262",
-			boxShadow: "0px 0px 60px 0px #635BFF4D",
-		},
-		tags: [
-			{ id: 1, name: "HTML", path: "/assets/icons/html.png" },
-			{ id: 2, name: "CSS3", path: "/assets/icons/css3.png" },
-			{ id: 3, name: "JavaScript", path: "/assets/icons/javascript.png" },
-			{ id: 4, name: "Next.js", path: "/assets/icons/nextjs-boilerplate-logo.png" },
-			{ id: 5, name: "MongoDB", path: "/assets/icons/mongodb.png" },
-			{ id: 6, name: "TailwindCSS", path: "/assets/icons/tailwind-css.png" },
-		],
 	},
 
 	{
@@ -88,6 +65,28 @@ export const myProjects = [
 			{ id: 4, name: "React.js", path: "/assets/icons/react.png" },
 			{ id: 5, name: "Node.js", path: "/assets/icons/node-js.png" },
 			{ id: 6, name: "MongoDB", path: "/assets/icons/mongodb.png" },
+		],
+	},
+	{
+		title: "NFT Marketplace",
+		desc: "A Web3 NFT marketplace featuring Metamask authentication, NFT minting, real-time bidding auctions, and smart contract-based secondary sales.",
+		subdesc: "Built with Next.js, MongoDB, TailwindCSS, Infura, Ethers.js, and IPFS to ensure a seamless and decentralised user experience.",
+		href: "https://new-elements-marketplace.vercel.app/",
+		texture: "/textures/project/nft-marketplace1.mp4",
+		logo: "/assets/project-logo1.png",
+		spotlight: "/assets/spotlight1.png",
+		logoStyle: {
+			backgroundColor: "#1C1A43",
+			border: "0.2px solid #252262",
+			boxShadow: "0px 0px 60px 0px #635BFF4D",
+		},
+		tags: [
+			{ id: 1, name: "HTML", path: "/assets/icons/html.png" },
+			{ id: 2, name: "CSS3", path: "/assets/icons/css3.png" },
+			{ id: 3, name: "JavaScript", path: "/assets/icons/javascript.png" },
+			{ id: 4, name: "Next.js", path: "/assets/icons/nextjs-boilerplate-logo.png" },
+			{ id: 5, name: "MongoDB", path: "/assets/icons/mongodb.png" },
+			{ id: 6, name: "TailwindCSS", path: "/assets/icons/tailwind-css.png" },
 		],
 	},
 	{
