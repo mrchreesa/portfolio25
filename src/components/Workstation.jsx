@@ -4,7 +4,7 @@ import { TextureLoader } from "three";
 import { Suspense } from "react";
 
 const Workstation = (props) => {
-	const { nodes, materials } = useGLTF("/models/retro_computer_workstation.glb");
+	const { nodes, materials } = useGLTF("/models/retro_computer_compressed.glb");
 
 	const screenTxt = useLoader(TextureLoader, "textures/desk/code-min.png");
 	const portfolioTxt = useLoader(TextureLoader, "textures/desk/portfolio-min.png");
@@ -187,6 +187,6 @@ const Workstation = (props) => {
 	);
 };
 
-useGLTF.preload("/models/retro_computer_workstation.glb");
+useGLTF.preload("/models/retro_computer_compressed.glb");
 
 export default Workstation;
