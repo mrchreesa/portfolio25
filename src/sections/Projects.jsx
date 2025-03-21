@@ -35,6 +35,14 @@ const Projects = () => {
 
 			<div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
 				<div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+					<button className="arrow-btn absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10" onClick={() => handleNavigation("previous")}>
+						<img src="/assets/left-arrow.png" alt="left arrow" />
+					</button>
+
+					<button className="arrow-btn absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 z-10" onClick={() => handleNavigation("next")}>
+						<img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+					</button>
+
 					<div className="absolute top-0 right-0">
 						<img src={currentProject.spotlight} alt="spotlight" className="z-0 w-full h-96 object-cover rounded-xl" />
 					</div>
@@ -73,22 +81,6 @@ const Projects = () => {
 							)}
 						</div>
 					</div>
-
-					<div className="flex justify-between items-center mt-7">
-						<button className="arrow-btn" onClick={() => handleNavigation("previous")}>
-							<img src="/assets/left-arrow.png" alt="left arrow" />
-						</button>
-
-						<div className="flex gap-2">
-							{[...Array(projectCount)].map((_, index) => (
-								<div key={index} className={`w-2 h-2 rounded-full cursor-pointer transition-colors duration-200 ${index === selectedProjectIndex ? "bg-white" : "bg-white/50"}`} onClick={() => setSelectedProjectIndex(index)} />
-							))}
-						</div>
-
-						<button className="arrow-btn" onClick={() => handleNavigation("next")}>
-							<img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
-						</button>
-					</div>
 				</div>
 
 				<div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
@@ -104,6 +96,14 @@ const Projects = () => {
 						</Center>
 						<OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
 					</Canvas>
+				</div>
+			</div>
+
+			<div className="flex justify-center mt-8">
+				<div className="flex gap-2">
+					{[...Array(projectCount)].map((_, index) => (
+						<div key={index} className={`w-2 h-2 rounded-full cursor-pointer transition-colors duration-200 ${index === selectedProjectIndex ? "bg-white" : "bg-white/50"}`} onClick={() => setSelectedProjectIndex(index)} />
+					))}
 				</div>
 			</div>
 		</section>
