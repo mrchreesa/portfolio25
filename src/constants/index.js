@@ -28,7 +28,7 @@ export const myProjects = [
 		subdesc: "Built with Next.js, TypeScript, Supabase, Stripe, and OpenAI/Anthropic APIs to provide seamless AI-powered resume tailoring and cover letter generation for job seekers.",
 		href: "https://kodkodai.com",
 		texture: "/textures/project/Kodkod.mp4",
-		logo: "/assets/project-logo1.png",
+		logo: "/assets/kodkod-logo.png",
 		spotlight: "/assets/spotlight1.png",
 		logoStyle: {
 			backgroundColor: "#1C1A43",
@@ -95,7 +95,7 @@ export const myProjects = [
 		subdesc: "Built with Next.js, MongoDB, TailwindCSS, Infura, Ethers.js, and IPFS to ensure a seamless and decentralised user experience.",
 		href: "https://new-elements-marketplace.vercel.app/",
 		texture: "/textures/project/nft-marketplace1.mp4",
-		logo: "/assets/project-logo1.png",
+		logo: "/assets/project-logo4.png",
 		spotlight: "/assets/spotlight1.png",
 		logoStyle: {
 			backgroundColor: "#1C1A43",
