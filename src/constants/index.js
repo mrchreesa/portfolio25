@@ -217,7 +217,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
 	{
 		id: 1,
-		name: "Google DeepMind Research Ready",
+		name: "Outlier AI",
 		pos: "AI Research Internship",
 		duration: "June 2025 - Sept 2025",
 		title: "Built, trained, and fine-tuned large language models (LLMs) like GPT and ViT using PyTorch, enhancing model performance through systematic experimentation. Designed and executed experiments to evaluate model outputs, improving accuracy and efficiency.",
