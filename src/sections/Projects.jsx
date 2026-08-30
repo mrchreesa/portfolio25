@@ -67,11 +67,13 @@ const Projects = () => {
 							))}
 						</div>
 
-						<div className="flex items-center gap-4">
-							<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600 " href={currentProject.href} target="_blank" rel="noreferrer">
-								<p>{currentProject.report ? "Check Experiment" : "Check Live Site"}</p>
-								<img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-							</a>
+						<div className="flex items-center gap-4 empty:hidden">
+							{currentProject.href && (
+								<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600 " href={currentProject.href} target="_blank" rel="noreferrer">
+									<p>{currentProject.report ? "Check Experiment" : "Check Live Site"}</p>
+									<img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+								</a>
+							)}
 
 							{currentProject.report && (
 								<a className="flex items-center z-100 gap-2 cursor-pointer text-white-600 " href={currentProject.report} target="_blank" rel="noreferrer">
