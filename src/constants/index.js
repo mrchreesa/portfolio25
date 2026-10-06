@@ -181,14 +181,14 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 	return {
 		// Workstation scaling and positioning
 		workstationScale: isSmall ? 15 : isMobile ? 20 : isTablet ? 23 : 25,
-		workstationPosition: isSmall ? [0, -4, 0] : isMobile ? [0, -5, 0] : isTablet ? [0, -5.5, 0] : [0, -6, 0],
+		workstationPosition: isSmall ? [0, -6, 0] : isMobile ? [0, -5, 0] : isTablet ? [0, -5.5, 0] : [0, -6, 0],
 
 		// Decorative elements positioning
 		cubePosition: isSmall ? [-2.5, 4, 0] : isMobile ? [-4, 3.5, 0] : isTablet ? [-7, 2, 0] : [-10, 1.5, 0],
 		cubeScale: isSmall ? 0.5 : isMobile ? 0.6 : isTablet ? 0.8 : 1,
 
-		reactLogoPosition: isSmall ? [2.5, 4, 0] : isMobile ? [4, 3.5, 0] : isTablet ? [7, 3, 0] : [12, 3, 0],
-		reactLogoScale: isSmall ? 0.2 : isMobile ? 0.25 : isTablet ? 0.3 : 0.32,
+		neuralNetPosition: isSmall ? [2.5, 4, 0] : isMobile ? [4, 3.5, 0] : isTablet ? [7, 3, 0] : [12, 3, 0],
+		neuralNetScale: isSmall ? 0.5 : isMobile ? 0.6 : isTablet ? 0.75 : 0.8,
 	};
 };
 

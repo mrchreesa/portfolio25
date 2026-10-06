@@ -1,12 +1,12 @@
 import { useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
+import { SRGBColorSpace, TextureLoader } from "three";
 import { Suspense } from "react";
 
 const Workstation = (props) => {
 	const { nodes, materials } = useGLTF("/models/retro_computer_compressed.glb");
 
-	const screenTxt = useLoader(TextureLoader, "textures/desk/code-min.png");
+	const screenTxt = useLoader(TextureLoader, "textures/desk/error-surface.png");
 	const portfolioTxt = useLoader(TextureLoader, "textures/desk/portfolio-min.png");
 
 	return (
@@ -75,7 +75,7 @@ const Workstation = (props) => {
 					</mesh>
 					<mesh castShadow receiveShadow geometry={nodes.pCube251_Screen1_0.geometry} material={materials.Screen1} position={[4.367, 16.544, -0.954]} rotation={[0, -Math.PI / 6, 0]} scale={[4.261, 4.11, 2.872]}>
 						<meshBasicMaterial>
-							<primitive attach="map" object={screenTxt} offset={[-2.1, -0.65]} repeat={[3, 3]} />
+							<primitive attach="map" object={screenTxt} colorSpace={SRGBColorSpace} offset={[-2.1, -0.65]} repeat={[3, 3]} />
 						</meshBasicMaterial>
 					</mesh>
 					<mesh castShadow receiveShadow geometry={nodes.pCube254_Screen1_0.geometry} material={materials.Screen1} position={[10.959, 12.213, 6.681]} rotation={[-Math.PI / 2, 0, -1.21]} scale={[3.384, 3.264, 2.281]} />

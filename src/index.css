@@ -8,9 +8,15 @@
 	scroll-behavior: smooth;
 }
 
+/* Keep anchored sections clear of the fixed navbar */
+html {
+	scroll-padding-top: 6rem;
+}
+
 body {
 	background: #010103;
 	font-family: "General Sans", sans-serif;
+	overflow-x: clip;
 }
 
 @layer utilities {
@@ -19,7 +25,7 @@ body {
 	}
 
 	.head-text {
-		@apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+		@apply sm:text-4xl text-3xl font-semibold text-white-700;
 	}
 
 	.nav-ul {
@@ -38,10 +44,6 @@ body {
 		@apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
 	}
 
-	.text-gray_gradient {
-		@apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
-	}
-
 	/* button component */
 	.btn {
 		@apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
@@ -58,6 +60,17 @@ body {
 	/* hero section */
 	.hero_tag {
 		@apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal;
+	}
+
+	/* Full-bleed past the max-w-7xl container */
+	.hero-canvas {
+		@apply absolute inset-y-0 left-[calc(50%-50vw)] w-screen transition-opacity duration-1000 ease-in-out motion-reduce:transition-none;
+	}
+
+	/* Fades the floor out at the bottom. Goes on the canvas, which only mounts after the
+	   typewriter finishes: a mask that exists during typing slows the typing down */
+	.hero-canvas-fade {
+		mask-image: linear-gradient(to bottom, black 70%, transparent);
 	}
 
 	/* about section */

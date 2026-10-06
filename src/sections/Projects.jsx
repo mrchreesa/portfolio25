@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 import { myProjects } from "../constants/index.js";
 import CanvasLoader from "../components/CanvasLoader.jsx";
@@ -12,6 +13,8 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
 	const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+	// OrbitControls sets touch-action: none, which stops touch users scrolling past the canvas
+	const isTouch = useMediaQuery({ query: "(pointer: coarse)" });
 
 	const handleNavigation = (direction) => {
 		setSelectedProjectIndex((prevIndex) => {
@@ -96,7 +99,7 @@ const Projects = () => {
 								</group>
 							</Suspense>
 						</Center>
-						<OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+						{!isTouch && <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />}
 					</Canvas>
 				</div>
 			</div>

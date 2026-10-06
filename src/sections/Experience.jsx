@@ -1,6 +1,7 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 import Developer from "../components/Developer.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
@@ -8,6 +9,8 @@ import { workExperiences } from "../constants/index.js";
 
 const WorkExperience = () => {
 	const [animationName, setAnimationName] = useState("idle");
+	// OrbitControls sets touch-action: none, which stops touch users scrolling past the canvas
+	const isTouch = useMediaQuery({ query: "(pointer: coarse)" });
 
 	return (
 		<section className="c-space my-20" id="experience">
@@ -20,7 +23,7 @@ const WorkExperience = () => {
 							<ambientLight intensity={7} />
 							<spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
 							<directionalLight position={[10, 10, 10]} intensity={1} />
-							<OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+							{!isTouch && <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />}
 
 							<Suspense fallback={<CanvasLoader />}>
 								<Developer position-y={-3} scale={3} animationName={animationName} />

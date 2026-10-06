@@ -8,7 +8,7 @@ const Footer = () => {
 					<img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
 				</a>
 				<a className="social-icon" href="https://www.linkedin.com/in/kristian-rahnev/" target="_blank" rel="noopener noreferrer">
-					<img src="/assets/linkedin-icon.svg" alt="twitter" className="w-1/2 h-1/2" />
+					<img src="/assets/linkedin-icon.svg" alt="LinkedIn" className="w-1/2 h-1/2" />
 				</a>
 			</div>
 
